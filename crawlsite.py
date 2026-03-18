@@ -92,7 +92,7 @@ for doc in retrieved_docs:
   print("-" * 50)
   print()
 
-llm=ChatGroq(model_name='llama-3.1-8b-instant',temperature=0,api_key=" put ur api key ")
+llm=ChatGroq(model_name='llama-3.1-8b-instant',temperature=0,api_key=" put your api key ")
 
 
 # Create qa chain and ask the question
