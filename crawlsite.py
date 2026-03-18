@@ -7,19 +7,19 @@ Original file is located at
     https://colab.research.google.com/drive/1NDlWoTe4aOx6AfFV_1y4_lwMa3ttv4_8
 """
 
-pip install langchain>=1.0.0 langchain-core>=1.0.0 langchain-community>=0.4.0 langchain-groq>=1.0.0 langchain-chroma>=1.0.0 chromadb>=0.4.24 fastembed>=0.2.6 streamlit>=1.32.0 beautifulsoup4>=4.12.3 python-dotenv>=1.0.1 pandas>=2.2.1
+# pip install langchain>=1.0.0 langchain-core>=1.0.0 langchain-community>=0.4.0 langchain-groq>=1.0.0 langchain-chroma>=1.0.0 chromadb>=0.4.24 fastembed>=0.2.6 streamlit>=1.32.0 beautifulsoup4>=4.12.3 python-dotenv>=1.0.1 pandas>=2.2.1
 
-pip install -q \
-  litellm \
-  wikipedia \
-  langchain \
-  langchain-groq \
-  langchain_community \
-  langchain-qdrant \
-  langchain_core \
-  fastembed \
-  flashrank \
-  pypdf
+# pip install -q \
+#   litellm \
+#   wikipedia \
+#   langchain \
+#   langchain-groq \
+#   langchain_community \
+#   langchain-qdrant \
+#   langchain_core \
+#   fastembed \
+#   flashrank \
+#   pypdf
 
 from langchain_community.document_loaders import PyPDFLoader
 from fastembed import TextEmbedding
@@ -92,7 +92,7 @@ for doc in retrieved_docs:
   print("-" * 50)
   print()
 
-llm=ChatGroq(model_name='llama-3.1-8b-instant',temperature=0,api_key="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")
+llm=ChatGroq(model_name='llama-3.1-8b-instant',temperature=0,api_key=" put ur api key ")
 
 
 # Create qa chain and ask the question
@@ -123,8 +123,8 @@ rag_chain.invoke(
 )["answer"]
 
 
-# ask question wrt to the previous answer
-conversational_rag_chain.invoke(
-    {"input": "what is teh eligibility crieatia"},
-    config={"configurable": {"session_id": "abc123"}},
-)["answer"]
+# # ask question wrt to the previous answer
+# conversational_rag_chain.invoke(
+#     {"input": "what is teh eligibility crieatia"},
+#     config={"configurable": {"session_id": "abc123"}},
+# )["answer"]
